@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>View Document</title>
+</head>
+<body>
+    <h1>Document Metadata</h1>
+    <ul>
+        {% for key, value in metadata.items %}
+        <li><strong>{{ key }}:</strong> {{ value }}</li>
+        {% endfor %}
+    </ul>
+    <a href="{% url 'download_pdf' doc.pk %}">Download PDF</a>
+</body>
+</html>
