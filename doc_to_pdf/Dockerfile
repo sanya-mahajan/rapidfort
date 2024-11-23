@@ -5,6 +5,6 @@ WORKDIR /app
 COPY requirements.txt requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY . .
+COPY doc-to-pdf/ .
 
-CMD ["gunicorn", "doc_to_pdf.wsgi:application", "--bind", "0.0.0.0:8000"]\
+CMD ["gunicorn", "doc_to_pdf.wsgi:application", "--bind", "0.0.0.0:8000"]
