@@ -1,16 +1,16 @@
-name: Docker Build
+name: Docker Build  
 
-on:
-  push:
-    branches:
-      - main
+on:  
+  push:  
+    branches:  
+      - main  
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+jobs:  
+  build:  
+    runs-on: ubuntu-latest  
+    steps:  
+      - name: Checkout code  
+        uses: actions/checkout@v3  
 
-      - name: Build Docker image
-        run: docker build -t doc-to-pdf-app .
+      - name: Build Docker image  
+        run: docker build -t doc-to-pdf-app -f doc_to_pdf/Dockerfile .
